@@ -10,6 +10,12 @@
             margin: 20px;
             padding: 20px;
             background-color: #f4f4f4;
+            display: flex;
+        }
+
+        aside {
+            flex: 1;
+            margin-right: 20px;
         }
 
         header {
@@ -21,6 +27,7 @@
         }
 
         section {
+            flex: 2;
             margin-top: 20px;
         }
 
@@ -45,35 +52,55 @@
 </head>
 <body>
 
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer</p>
-    </header>
+    <aside>
+        <address>
+            <strong>Your Name</strong><br>
+            Your Street, Your City<br>
+            Your Country<br>
+            Email: your@email.com<br>
+            Phone: +123 456 789
+        </address>
 
-    <section class="education">
-        <h2>Education</h2>
+        <h2>Languages</h2>
         <ul>
-            <li>
-                <strong>University Name</strong>
-                <p>Degree in Computer Science, Graduation Year</p>
-            </li>
-            <!-- Add more education entries as needed -->
+            <li>English</li>
+            <li>Spanish</li>
+            <!-- Add more languages as needed -->
         </ul>
-    </section>
+    </aside>
 
-    <section class="experience">
-        <h2>Work Experience</h2>
-        <ul>
-            <li>
-                <strong>Company Name</strong>
-                <p>Position - Date Range</p>
-                <p>Description of responsibilities and achievements.</p>
-            </li>
-            <!-- Add more work experience entries as needed -->
-        </ul>
-    </section>
+    <section>
+        <header>
+            <h1>Your Name</h1>
+            <p>Web Developer</p>
+        </header>
 
-    <!-- Add more sections like skills, projects, etc. as needed -->
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>University Name</strong>
+                    <p>Degree in Computer Science, Graduation Year</p>
+                </li>
+                <!-- Add more education entries as needed -->
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Company Name</strong>
+                    <p>Position - Date Range</p>
+                    <p>Description of responsibilities and achievements.</p>
+                </li>
+                <!-- Add more work experience entries as needed -->
+            </ul>
+        </section>
+
+        <!-- Add more sections like skills, projects, etc. as needed -->
+
+    </section>
 
 </body>
 </html>
