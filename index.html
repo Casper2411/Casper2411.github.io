@@ -16,7 +16,8 @@
         aside {
             flex: 1;
             margin-right: 20px;
-            background-color: aqua;
+            background-color: lightgrey;
+            padding: 10px;
         }
 
         header {
@@ -24,6 +25,7 @@
         }
 
         h1 {
+            font-size: 40px;
             color: #333;
         }
 
@@ -34,16 +36,17 @@
 
         h2 {
             color: #333;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 2px solid #000000;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
         }
+        
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .education, .experience {
@@ -54,36 +57,71 @@
 <body>
 
     <aside>
+        <img src="images/Profile_picture.jpg" alt="A profile picture of me"  style="width: 200px; height: 200px;">
+
         <address>
-            <strong>Your Name</strong><br>
-            Your Street, Your City<br>
-            Your Country<br>
-            Email: your@email.com<br>
-            Phone: +123 456 789
+            <strong>Casper Storm Frøding</strong><br>
+            Copenhagen, Amager<br>
+            Email: csfr@itu.dk<br>
+            Phone: +45 21962677
         </address>
+
+        <h2>Skills</h2>
+        <ul style="list-style-type:disc; margin-left: 15px;">
+            <li>Java</li>
+            <li>Python</li>
+            <li>C# & .Net</li>
+            <li>Customer Service</li>
+            <li>Html and JavaScript</li>
+            <li>UI design (Figma)</li>
+            <li>React</li>
+            <li>Transport experience</li>
+            <li>Assembly & C</li>
+            <li>Golang</li>
+            <li>Database management</li>
+            <li>Arduino</li>
+            <li>hardware and sensors</li>
+        </ul>
 
         <h2>Languages</h2>
         <ul>
-            <li>English</li>
-            <li>Spanish</li>
+            <li><b>Danish</b>: native language</li>
+            <li><b>English</b>: Fluently, both written and spoken</li>
+            <li><b>Swedish</b>: Understanding, and minor vocabulary</li>
             <!-- Add more languages as needed -->
         </ul>
     </aside>
 
     <section>
         <header>
-            <h1>Your Name</h1>
-            <p>Web Developer</p>
+            <h1>Casper Storm Frøding</h1>
+            <p>Software Developper</p>
         </header>
 
         <section class="education">
             <h2>Education</h2>
             <ul>
                 <li>
-                    <strong>University Name</strong>
-                    <p>Degree in Computer Science, Graduation Year</p>
+                    <strong>IT university of Copenhagen</strong>
+                    <p>Bachelors Degree in software development</p>
+                    <p><i>Current, 2022 - graduating Summer 2025</i></p>
                 </li>
-                <!-- Add more education entries as needed -->
+            </ul>
+            <br>
+            <ul>
+                <li>
+                    <strong>Sukkertoppen Gymnasium</strong>
+                    <p>Specilization in Computer Science</p>
+                    <p><i>2017-2020</i></p>
+                </li>
+            </ul>
+            <br>
+            <ul>
+                <li>
+                    <strong>Filipskolen</strong>
+                    <p>My primary school</p>
+                    <p><i>2017-2017</i></p>
+                </li>
             </ul>
         </section>
 
