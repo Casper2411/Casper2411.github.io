@@ -1,38 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hej Skaaat! Vil du være min kæææreste?</title>
+<title>Valentin?</title>
 <style>
+	:root {
+	--romantic-red: #e63946;
+	--soft-pink: #ffb3c1;
+	--deep-rose: #c9184a;
+	--cream: #fff0f3;
+	--white: #ffffff;
+	--evil-black: #362a28;
+	--eviler-black: #000000;
+	}
+
 	body {
-            background-color: black; /* Black background for the whole page */
-            color: white; /* White text color for the entire page */
-            margin: 0;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-    }
-	#legend {
-		font-family: Arial, sans-serif;
-		margin-bottom: 20px;
-		font-size: 16px;
+	background-color: var(--cream);
+	color: #4a4e69;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	}
-	#legend-title {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 10px;
+    
+	/* Titles */
+	h1 {
+	color: var(--deep-rose);
+	font-size: 3rem;
+	margin-top: 50px;
+	text-shadow: 2px 2px var(--soft-pink);
 	}
-	#source {
-            font-size: 20px;
-            margin-bottom: 10px;
-			font-style: italic;
+
+	h2 {
+	color: var(--romantic-red);
+	border-bottom: 2px solid var(--soft-pink);
+	display: inline-block;
+	padding-bottom: 5px;
 	}
-	#legend-image {
-            max-width: 30%; /* Make sure the image fits within the container */
-            height: auto; /* Maintain the aspect ratio of the image */
-            margin-bottom: 20px;
-    }
+
+	/* Content Container */
+	.container {
+	max-width: 800px;
+	background: var(--white);
+	padding: 40px;
+	margin: 20px;
+	border-radius: 20px;
+	box-shadow: 0 10px 25px rgba(255, 179, 193, 0.5);
+	text-align: center;
+	}
+
+	/* Decorative Heart Button */
+	.btn-heart {
+	background-color: var(--romantic-red);
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: transform 0.2s;
+	}
+
+	.btn-heart:hover {
+	transform: scale(1.05);
+	background-color: var(--deep-rose);
+	}
+
+	/* Decorative No Button */
+	.btn-no {
+	background-color: var(--evil-black);
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: transform 0.2s;
+	}
+
+	.btn-no:hover {
+	transform: scale(1.05);
+	background-color: var(--eviler-black);
+	}
+
+	.container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: var(--soft-pink);
+	padding: 30px;
+	}
+	.container button {
+	padding: 20px;
+	text-align: center;
+	}
+
+
+	/*Gemini help for animation*/
+	/* Animation for falling items */
+	.particle {
+		position: fixed;
+		top: -50px;
+		font-size: 2rem;
+		pointer-events: none;
+		z-index: 999;
+		animation: fall linear forwards;
+	}
+
+	@keyframes fall {
+		to {
+			transform: translateY(110vh) rotate(360deg);
+		}
+	}
+
+	/* "Bad" effect class */
+	.dark-mode {
+		background-color: var(--eviler-black) !important;
+		transition: background-color 0.5s ease;
+	}
+
+	.dark-mode h1, .dark-mode h2 {
+		color: grey !important;
+		text-shadow: none !important;
+	}
 </style>
 </head>
 <body>
-	<div id="text">Hej skat!</div>
+	<h1>Hej skat!</h1>
+	<h2>Er glad for vi har været sammen så lang tid nu ❤️❤️</h2>
+	<h2>Jeg håbede lidt, at hvis jeg spørger pænt, vil du så være min valentin?❤️</h2>
+	<div class="container">
+		<button id="yesBtn" class="btn-heart">✨ Ja det vil jeg gerne ✨</button>
+		<button id="noBtn" class="btn-no">😈 Nej 😈</button>
+	</div>
+	<script src="/script.js"></script>
 </body>
 </html>
