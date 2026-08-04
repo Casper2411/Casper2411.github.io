@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bingo</title>
 <style>
   body {
@@ -12,33 +13,37 @@
     min-height: 100vh;
     background: #f2f2f2;
     margin: 0;
+    padding: 12px;
+    box-sizing: border-box;
   }
 
   .bingo-card {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 6px;
+    gap: 2vw;
     background: #333;
-    padding: 6px;
+    padding: 2vw;
     border-radius: 8px;
+    width: min(95vw, 600px);
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
   }
 
   .cell {
     position: relative;
-    width: 100px;
-    height: 100px;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 6px;
+    padding: 1.5vw;
     box-sizing: border-box;
-    font-size: 13px;
+    font-size: clamp(11px, 3vw, 16px);
     cursor: pointer;
     border-radius: 4px;
     user-select: none;
+    overflow: hidden;
   }
 
   .cell.marked {
