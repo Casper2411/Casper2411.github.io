@@ -18,33 +18,33 @@
   }
 
   .bingo-card {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 2vw;
-    background: #333;
-    padding: 2vw;
-    border-radius: 8px;
-    width: min(95vw, 600px);
-    aspect-ratio: 1 / 1;
-    box-sizing: border-box;
-  }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 6px;
+  background: #333;
+  padding: 6px;
+  border-radius: 8px;
+  width: min(95vw, 600px);
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+}
 
-  .cell {
-    position: relative;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1.5vw;
-    box-sizing: border-box;
-    font-size: clamp(11px, 3vw, 16px);
-    cursor: pointer;
-    border-radius: 4px;
-    user-select: none;
-    overflow: hidden;
-  }
+.cell {
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: clamp(11px, 3vw, 16px);
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  overflow: hidden;
+}
 
   .cell.marked {
     background: #ffe08a;
