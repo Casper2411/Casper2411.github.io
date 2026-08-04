@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bingo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+    margin: 0;
+  }
+
+  .bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 6px;
+    background: #333;
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .cell {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6px;
+    box-sizing: border-box;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+  }
+
+  .cell.marked {
+    background: #ffe08a;
+  }
+
+  .cell.marked::before,
+  .cell.marked::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    width: 4px;
+    height: 84%;
+    background: #d9363e;
+  }
+
+  .cell.marked::before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .cell.marked::after {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+</style>
+</head>
+<body>
+
+<div class="bingo-card" id="bingoCard"></div>
+
+<script>
+  const card = document.getElementById('bingoCard');
+
+  // Add or change sentences here. There must be exactly 25 entries (one per square).
+  const sentences = [
+    "Lorem ipsum 1", "Lorem ipsum 2", "Lorem ipsum 3", "Lorem ipsum 4", "Lorem ipsum 5",
+    "Lorem ipsum 6", "Lorem ipsum 7", "Lorem ipsum 8", "Lorem ipsum 9", "Lorem ipsum 10",
+    "Lorem ipsum 11", "Lorem ipsum 12", "Lorem ipsum 13", "Lorem ipsum 14", "Lorem ipsum 15",
+    "Lorem ipsum 16", "Lorem ipsum 17", "Lorem ipsum 18", "Lorem ipsum 19", "Lorem ipsum 20",
+    "Lorem ipsum 21", "Lorem ipsum 22", "Lorem ipsum 23", "Lorem ipsum 24", "Lorem ipsum 25"
+  ];
+
+  const totalCells = sentences.length;
+
+  for (let i = 0; i < totalCells; i++) {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    cell.textContent = sentences[i];
+    cell.addEventListener('click', () => {
+      cell.classList.toggle('marked');
+    });
+    card.appendChild(cell);
+  }
+</script>
+
+</body>
+</html>

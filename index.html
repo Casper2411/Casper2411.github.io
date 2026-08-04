@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SnowPenhagen Visualisations</title>
+<title>welcome page</title>
 <style>
+	/* love's Theme - style.css */
+	:root {
+	--romantic-red: #e63946;
+	--soft-pink: #ffb3c1;
+	--deep-rose: #c9184a;
+	--cream: #fff0f3;
+	--white: #ffffff;
+	}
+
 	body {
-            background-color: purple; /* background for the whole page */
-            color: white; /* White text color for the entire page */
-            margin: 0;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-    }
+	background-color: var(--cream);
+	color: #4a4e69;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+
+	/* Titles */
+	h1 {
+	color: var(--deep-rose);
+	font-size: 3rem;
+	margin-top: 50px;
+	text-shadow: 2px 2px var(--soft-pink);
+	}
+
+	h2 {
+	color: var(--romantic-red);
+	border-bottom: 2px solid var(--soft-pink);
+	display: inline-block;
+	padding-bottom: 5px;
+	}
+
+	/* Content Container */
+	.container {
+	max-width: 800px;
+	background: var(--white);
+	padding: 40px;
+	margin: 20px;
+	border-radius: 20px;
+	box-shadow: 0 10px 25px rgba(255, 179, 193, 0.5);
+	text-align: center;
+	}
+
+	/* Decorative Heart Button */
+	.btn-heart {
+	background-color: var(--romantic-red);
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: transform 0.2s;
+	}
+
+	.btn-heart:hover {
+	transform: scale(1.1);
+	background-color: var(--deep-rose);
+	}
 </style>
 </head>
 <body>
-	<div id="text">Welcome to my page!</div>
-	<div id="text">Click here to see a previous project of mine: <a href="https://casper2411.github.io/snowpenhagen/">SnowPenhagen Visualisations</a></div>
+	<h1>Welcome to my page!</h1>
+	<h2>Click here to see a previous project of mine: <a href="https://casper2411.github.io/snowpenhagen/">SnowPenhagen Visualisations</a></h2>
 </body>
 </html>
