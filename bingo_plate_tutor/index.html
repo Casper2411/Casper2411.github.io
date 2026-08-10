@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bingo</title>
+<title>Bingo plate Icebreaker</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
   .bingo-card {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 6px;
   background: #333;
   padding: 6px;
@@ -77,7 +77,28 @@
 <script>
   const card = document.getElementById('bingoCard');
 
-  // Add or change sentences here. There must be exactly 25 entries (one per square).
+  //Function for shuffling indexes in the array, to randomize bingo plate
+  // Inspired by : https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
+  function shuffle(array) {
+    var i = array.length,
+        j = 0,
+        temp;
+
+    while (i--) {
+
+        j = Math.floor(Math.random() * (i+1));
+
+        // swap randomly chosen element with current element
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+
+    }
+
+    return array;
+  }
+
+  // Add or change sentences here. There must be exactly 20 entries ( or one per square if you want more squares).
   const sentences = [
     "I have skydived", "I have a plant I've kept alive for over a year", "I play an instrument", "I collect something", "I have been camping in a tent or van",
     "I have a pet", "I have younger siblings", "I have bungee jumped", "I have been to another continent", "I have been on TV or in a newspaper",
@@ -85,12 +106,14 @@
     "I have been to a music festival", "I have been to a wedding this year", "I have given a presentation in front of more than 50 people", "I have a hidden talent", "I have met someone famous"
   ];
 
+  var indexForSentences = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]) //The amount of indexes should also be randomised here if a larger bingo plate is desired.
+
   const totalCells = sentences.length;
 
   for (let i = 0; i < totalCells; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    cell.textContent = sentences[i];
+    cell.textContent = sentences[indexForSentences[i]];
     cell.addEventListener('click', () => {
       cell.classList.toggle('marked');
     });
